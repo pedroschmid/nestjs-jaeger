@@ -23,6 +23,7 @@
   "dependencies": {
     "@nestjs/axios": "^1.0.0",
     "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/microservices": "^9.2.1",
     "@nestjs/platform-express": "^9.0.0",
@@ -39,6 +40,7 @@
     "amqp-connection-manager": "^4.1.9",
     "amqplib": "^0.10.3",
     "axios": "^1.2.1",
+    "dotenv": "^16.0.3",
     "mysql2": "^2.3.3",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",

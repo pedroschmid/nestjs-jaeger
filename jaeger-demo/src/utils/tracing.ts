@@ -7,9 +7,9 @@ import { getNodeAutoInstrumentations } from '@opentelemetry/auto-instrumentation
 import { SimpleSpanProcessor } from '@opentelemetry/sdk-trace-base';
 import { JaegerExporter } from '@opentelemetry/exporter-jaeger';
 
-export const initTracing = async (): Promise<void> => {
+export const initTracing = async (JAEGER_ENDPOINT: any): Promise<void> => {
   const jaegerExporter = new JaegerExporter({
-    endpoint: 'http://jaeger:14268/api/traces',
+    endpoint: JAEGER_ENDPOINT,
     maxPacketSize: 65000,
   });
 

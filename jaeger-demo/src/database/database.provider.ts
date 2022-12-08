@@ -1,3 +1,5 @@
+const { DB_HOST, DB_PORT, DB_USERNAME, DB_PASSWORD, DB_NAME } = process.env;
+
 import { DataSource } from 'typeorm';
 
 export const databaseProviders = [
@@ -6,11 +8,11 @@ export const databaseProviders = [
     useFactory: async () => {
       const dataSource = new DataSource({
         type: 'mysql',
-        host: 'mysql',
-        port: 3306,
-        username: 'root',
-        password: 'root',
-        database: 'test',
+        host: DB_HOST,
+        port: Number(DB_PORT),
+        username: DB_USERNAME,
+        password: DB_PASSWORD,
+        database: DB_NAME,
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
         synchronize: true,
       });
